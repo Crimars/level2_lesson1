@@ -2,8 +2,8 @@ package lesson1;
 
 public class Human implements Actionable{
 
-    private int run = 10;
-    private int jump = 3;
+    private int run;
+    private int jump;
 
     public Human(int run, int jump){
      this.jump = jump;
@@ -11,17 +11,19 @@ public class Human implements Actionable{
     }
 
     @Override
-    public void jump(int dist) {
+    public boolean jump(int dist) {
         if (dist <= jump) {
             System.out.println("human jump " + dist + " m");
         } else {
             System.out.println("human not jump " + dist + " m");
         }
+        return false;
     }
 
     @Override
-    public void run(int dist) {
+    public boolean run(int dist) {
       //  System.out.println("Human run " + dist + " m");
+        return false;
     }
 
 
