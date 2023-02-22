@@ -8,10 +8,20 @@ package lesson1;
 public class Main {
     public static void main(String[] args) {
         Actionable[] action = {
-                new Human(10, 1),
-                new Cat(8, 3),
-                new Robot(20, 5)
+                new Human(6, 12),
+                new Cat(2, 10),
+                new Robot(1, 25)
         };
+        Obstacles[] obstacles ={
+                new Wall(12),
+                new Track(35)
+        };
+        for (Actionable a : action){
+            for (Obstacles b : obstacles) {
+            if (!b.makeIt(a));
+            break;
+            }
+        }
     }
 }
 
