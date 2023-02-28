@@ -18,7 +18,7 @@ public class Main {
         };
         for (Actionable a : action){
             for (Obstacles b : obstacles) {
-            if (!b.makeIt(a));
+            if (b.makeIt(a));
             break;
             }
         }
