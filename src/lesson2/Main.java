@@ -36,15 +36,14 @@ public class Main {
         if (strArr.length != 4) {
             throw new MyArraySizeException("ошибка");
         }
-        for (int i = 0; i < strArr.length; i++) {
-            if (strArr[i].length != 4) {
+        for (String[] strings : strArr) {
+            if (strings.length != 4) {
                 throw new MyArraySizeException("ошибка");
             }
-            for (int j = 0; j < strArr[i].length; j++) {
+            for (String string : strings) {
                 try {
-                    count = count + Integer.parseInt(strArr[i][j]);
-                }
-                catch (NumberFormatException e) {
+                    count = count + Integer.parseInt(string);
+                } catch (NumberFormatException e) {
                     throw new MyArrayDataException("i, j");
                 }
             }
