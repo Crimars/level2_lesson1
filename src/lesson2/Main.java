@@ -25,7 +25,7 @@ public class Main {
             }
         }
         catch (MyArrayDataException e) {
-            System.out.println("Неверные данные");
+            System.out.println("Неверные данные ");
             System.out.println("Ошибка в ячейке");
         }
 
